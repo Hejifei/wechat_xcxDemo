@@ -1,0 +1,6 @@
+<button bindtap="wxlogin">wx.login</button>
+<button bindtap="checkSession">wx.checkSession</button>
+
+
+
+

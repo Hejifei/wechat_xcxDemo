@@ -1,0 +1,2 @@
+<!--pages/wx_request/wx_request.wxml-->
+<button bindtap="fileupload">文件上传</button>

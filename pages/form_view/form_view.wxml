@@ -1,0 +1,207 @@
+
+<view class='formviewC'>
+  <view class='labeltext'>button</view>
+  <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> default </button>
+  <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+          disabled="{{disabled}}" bindtap="primary"> primary </button>
+  <button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}"
+          disabled="{{disabled}}" bindtap="warn"> warn </button>
+  <button bindtap="setDisabled">点击设置以上按钮disabled属性</button>
+  <button bindtap="setPlain">点击设置以上按钮plain属性</button>
+  <button bindtap="setLoading">点击设置以上按钮loading属性</button>
+  <button open-type="contact">进入客服会话</button>
+  <button open-type="share">转发</button>
+</view>
+
+
+<view class='formviewC'>
+  <view class='labeltext'>checkbox</view>
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{items}}" wx:key="{{items}}">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}" color='red'/>{{item.value}}
+    </label>
+  </checkbox-group>
+</view>
+
+
+<view class='formviewC'>
+  <view class='labeltext'>form</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section section_gap">
+    <view class="section__title">switch</view>
+    <switch name="switch"/>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">slider</view>
+    <slider name="slider" show-value ></slider>
+  </view>
+
+  <view class="section">
+    <view class="section__title">input</view>
+    <input name="input" placeholder="please input here" />
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">radio</view>
+    <radio-group name="radio-group">
+      <label><radio value="radio1"/>radio1</label>
+      <label><radio value="radio2"/>radio2</label>
+    </radio-group>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">checkbox</view>
+    <checkbox-group name="checkbox">
+      <label><checkbox value="checkbox1"/>checkbox1</label>
+      <label><checkbox value="checkbox2"/>checkbox2</label>
+    </checkbox-group>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+  </view>
+</form>
+</view>
+
+
+<view class='formviewC'>
+  <view class='labeltext'>input</view>
+  <view class="section">
+    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+  </view>
+  <view class="section">
+    <input placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" />
+    <view class="btn-area">
+      <button bindtap="bindButtonTap">使得输入框获取焦点</button>
+    </view>
+  </view>
+  <view class="section">
+    <input  maxlength="10" placeholder="最大输入长度10" />
+  </view>
+  <view class="section">
+    <view class="section__title">你输入的是：{{inputValue}}</view>
+    <input  bindinput="bindKeyInput" placeholder="输入同步到view中"/>
+  </view>
+  <view class="section">
+    <input  bindinput="bindReplaceInput" placeholder="连续的两个1会变成2" />
+  </view>
+  <view class="section">
+    <input password type="number" />
+  </view>
+  <view class="section">
+    <input password type="text" />
+  </view>
+  <view class="section">
+    <input type="digit" placeholder="带小数点的数字键盘"/>
+  </view>
+  <view class="section">
+    <input type="idcard" placeholder="身份证输入键盘" confirm-type="done" confirm-type="search" />
+  </view>
+  <view class="section">
+    <input placeholder-style="color:red" placeholder="占位符字体是红色的" />
+  </view>
+</view>
+
+
+<view class='formviewC'>
+  <view class='labeltext'>label</view>
+  <view class="section section_gap">
+  <view class="section__title">表单组件在label内</view>
+  <checkbox-group class="group" bindchange="checkboxChange">
+    <view class="label-1" wx:for="{{checkboxItems}}" wx:key="{{checkboxItems}}">
+      <label>
+        <checkbox hidden value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+        <view class="label-1__icon">
+          <view class="label-1__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+        </view>
+        <text class="label-1__text">{{item.value}}</text>
+      </label>
+    </view>
+  </checkbox-group>
+  </view>
+
+  <view class="section section_gap">
+  <view class="section__title">label用for标识表单组件</view>
+  <radio-group class="group" bindchange="radioChange">
+    <view class="label-2" wx:for="{{radioItems}}"  wx:key="{{radioItems}}">
+      <radio id="{{item.name}}" hidden value="{{item.name}}" checked="{{item.checked}}"></radio>
+      <view class="label-2__icon">
+        <view class="label-2__icon-checked" style="opacity:{{item.checked ? 1: 0}}"></view>
+      </view>
+      <label class="label-2__text" for="{{item.name}}"><text>{{item.name}}</text></label>
+    </view>
+  </radio-group>
+  </view>
+</view>
+
+<view class='formviewC'>
+  <view class='labeltext'>picker</view>
+  <view class="section">
+    <view class="section__title">普通选择器</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        当前选择：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">多列选择器</view>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class="picker">
+        当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">时间选择器</view>
+    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+      <view class="picker">
+        当前选择: {{time}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="section">
+    <view class="section__title">日期选择器</view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class="picker">
+        当前选择: {{date}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">省市区选择器</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+      </view>
+    </picker>
+  </view>
+</view>
+
+
+
+<view class='formviewC'>
+  <view class='labeltext'>picker-view</view>
+  <view>
+    <view>{{year}}年{{month}}月{{day}}日</view>
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>
+
+
+
+<view class="btn-area">
+  <navigator url="../navigator/navigator?title=navigator" open-type="navigate" hover-class="navigator-hover">跳转到新页面</navigator>
+  <navigator url="../redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">在当前页打开</navigator>
+  <navigator url="/pages/logs/logs" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator>
+</view>

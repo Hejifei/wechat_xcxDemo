@@ -1,0 +1,16 @@
+.flex-wrp{display: -webkit-flex;display: flex;}
+
+.flex-item{
+  width: 180rpx;
+  height: 180rpx;
+  text-align: center;
+  line-height: 180rpx;
+}
+.bc_green{background-color: #09ba07;}
+.bc_red{background-color: #f76160;}
+.bc_blue{background-color: #0faeff;}
+.bc_yellow{background-color:yellow;}
+.scroll-view-item{height: 120px;}
+.scroll-view_H{display: -webkit-flex;display: flex;flex-direction: row;height: 120px;overflow: auto;}
+.scroll-view-item_H{width: 200px;height: 120px;display: inline-block;}
+.btn-area button{width: 90%;margin: 4px 5%;}

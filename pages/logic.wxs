@@ -1,0 +1,5 @@
+var comm = require("./comm.wxs");
+
+console.log(comm.fOO);
+console.log(comm.bar("logic.wxs"));
+console.log(comm.msg);

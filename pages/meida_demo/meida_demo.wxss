@@ -1,0 +1,12 @@
+.mediaC{padding: 40rpx 30rpx;background-color:#fbf9fe;}
+.mediaC .media_label{text-align: center;color: #000;border-bottom:1rpx solid #c0c0c0;margin:60px auto 20px;}
+.mediaC button{margin:8px 0;}
+
+
+
+
+
+
+
+
+

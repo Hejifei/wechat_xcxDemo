@@ -1,0 +1,4 @@
+/* pages/base_view/base_view.wxss */
+.labeltext{text-align: center;color: #969696;border-bottom:1rpx solid #c0c0c0;margin:40px 300rpx 20px 300rpx;}
+.processview{padding: 10px;}
+.processview progress{margin: 10px 0;}

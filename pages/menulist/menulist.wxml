@@ -1,0 +1,28 @@
+<view class="btn-area">
+  <navigator url="../view_01/view_01" open-type="navigate">flex布局</navigator>
+  <navigator url="../base_view/base_view" open-type="navigate">Icon text rich-text progress</navigator>
+  <navigator url="../form_view/form_view" open-type="navigate">表单提交</navigator>
+  <navigator url="../navigator/navigator?title=navigator" open-type="navigate" hover-class="navigator-hover">导航（带返回）</navigator>
+  <navigator url="../redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">导航（不带返回）</navigator>
+  <navigator url="/pages/index/index" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator>
+  <navigator url="/pages/open_abality/open_abality" open-type="switchTab" hover-class="other-navigator-hover">开放能力</navigator>
+  
+
+  <navigator url="../cover-view/cover-view" open-type="navigate">cover-view(覆盖在原生组件之上的文本视图)</navigator>
+  <navigator url="../swiper/swiper" open-type="navigate">swiper</navigator>
+  <navigator url="../map/map" open-type="navigate">map</navigator>
+  <navigator url="../canvas/canvas" open-type="navigate">canvas</navigator>
+  <navigator url="../meida_demo/meida_demo" open-type="navigate">媒体组件（音乐、图片、视频、照相机、直播）</navigator>
+  <navigator url="../movable-view/movable-view" open-type="navigate">可移动区域</navigator>
+  
+  <navigator url="../wx_request/wx_request" open-type="navigate">wx_request</navigator>
+  <navigator url="../websocket/websocket" open-type="navigate">websocket</navigator>
+  <navigator url="../Storage/Storage" open-type="navigate">Storage</navigator>
+  <navigator url="../location/location" open-type="navigate">位置</navigator>
+  <navigator url="../system/system" open-type="navigate">设备</navigator>
+  <navigator url="../canvas2/canvas2" open-type="navigate">绘图</navigator>
+
+  <navigator url="../openapi/openapi" open-type="navigate">开放接口</navigator>
+
+
+</view>

@@ -1,0 +1,26 @@
+<!--pages/canvas2/canvas2.wxml-->
+<canvas canvas-id="myCanvas" style="border: 1px solid;"/>
+<canvas canvas-id="myCanvas2"
+  style="margin: 5px; border:1px solid #d3d3d3;"
+  bindtouchstart="start"
+  bindtouchmove="move"
+  bindtouchend="end"/>
+
+<view hidden="{{hidden}}">
+  Coordinates: ({{x}}, {{y}})
+</view>
+
+
+<canvas canvas-id="myCanvas3" style="border: 1px solid;"/>
+<canvas canvas-id="myCanvas4" style="border: 1px solid;"/>
+<canvas canvas-id="myCanvas5" style="border: 1px solid;"/>
+<canvas canvas-id="myCanvas6" style="border: 1px solid;"/>
+<canvas canvas-id="myCanvas7" style="border: 1px solid;"/>
+<canvas canvas-id="myCanvas8" style="border: 1px solid;"/>
+<canvas canvas-id="myCanvas9" style="border: 1px solid;"/>
+<canvas canvas-id="myCanvas10" style="border: 1px solid;"/>
+
+
+
+
+

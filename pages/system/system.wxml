@@ -1,0 +1,23 @@
+<!--pages/system/system.wxml-->
+<text>获取系统信息:{{SystemInfo}}</text>
+<view>网络类型：{{networkType}}</view>
+<button bindtap="vibratelong">使手机发生较长时间的振动（400ms）</button>
+<button bindtap="vibrateshort">使手机发生较长时间的振动（15ms）</button>
+<button bindtap="phonecall">拨打电话</button>
+<button bindtap="scancode">扫码</button>
+<button bindtap="setclipboarddata">设置系统剪贴板的内容</button>
+<button bindtap="getclipboarddata">获取系统剪贴板内容</button>
+
+<button bindtap="setscreenbrightness">设置屏幕亮度</button>
+<button bindtap="setscreenon">设置是否保持常亮状态</button>
+
+<button bindtap="usercapturescreen">截屏</button>
+
+
+<button bindtap="startwifi">初始化 Wi-Fi 模块。</button>
+<button bindtap="stopwifi">关闭 Wi-Fi 模块。</button>
+
+
+
+
+
